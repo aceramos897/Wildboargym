@@ -1,0 +1,61 @@
+/* ============================================================
+   Wildboar Gym — brand styles (Bootstrap 5 is the base layer).
+   ============================================================ */
+
+:root {
+  --wb-dark: #0f172a;
+  --wb-accent: #16a34a;
+  --wb-muted: #64748b;
+}
+
+body { background: #f4f6f8; }
+.wb-wrap { max-width: 1080px; margin: 0 auto; }
+
+/* Navbar */
+.wb-navbar { background: var(--wb-dark); box-shadow: 0 2px 12px rgba(15,23,42,.25); }
+
+/* Cards & tables */
+.wb-card { border-radius: 14px; border: 0; box-shadow: 0 4px 16px rgba(15,23,42,.12); }
+.wb-table th { color: var(--wb-muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .03em; }
+.wb-table td { vertical-align: middle; }
+.wb-alert { border-left: 4px solid var(--wb-accent); }
+
+/* Stat cards (admin live tab) */
+.wb-stat { background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; }
+.wb-stat span { color: var(--wb-accent); font-weight: 700; display: block; }
+.wb-stat div { font-size: .8rem; color: var(--wb-muted); }
+
+/* Bar chart (reports) */
+.wb-bars .wb-bar-row { display: flex; gap: 8px; align-items: center; margin-bottom: 6px; }
+.wb-bar-day { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; width: 92px; color: var(--wb-muted); }
+.wb-pre { background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px; }
+
+/* Tabs */
+.wb-tabs .nav-link { color: var(--wb-muted); }
+.wb-tabs .nav-link.active { color: #111; font-weight: 600; }
+
+/* ---------- KIOSK (public entrance screen) ---------- */
+body.kiosk { background: linear-gradient(160deg, #0b1220 0%, #12203a 60%, #0b1220 100%); color: #eef2ff; }
+.kiosk-header { display: flex; justify-content: space-between; align-items: baseline; }
+.kiosk-clock { font-variant-numeric: tabular-nums; color: #facc15; }
+.kiosk-stats { display: flex; gap: 24px; margin-top: 14px; }
+.kiosk-stat { flex: 1; background: rgba(22,163,74,.12); border: 1px solid rgba(22,163,74,.45);
+              border-radius: 16px; text-align: center; padding: 10px; }
+.kiosk-stat span { color: #4ade80; font-weight: 700; }
+.kiosk-stat div { font-size: .8rem; color: #94a3b8; }
+.kiosk-form .form-control { background: #0b1220; color: #fff; border: 1px solid #334155; font-size: 1.5rem; letter-spacing: .08em; text-transform: uppercase; }
+.kiosk-form .form-control:focus { border-color: #16a34a; box-shadow: 0 0 0 .25rem rgba(22,163,74,.25); }
+.kiosk-form button { background: var(--wb-accent); }
+.kiosk-recent { display: flex; flex-direction: column; gap: 4px; }
+
+/* Member QR box */
+#qrcode img, #qrcode canvas { max-width: 220px; height: auto; }
+
+/* Success pulse for kiosk confirmation */
+.wb-ok { background: rgba(22,163,74,.15); border: 1px solid #16a34a; border-radius: 10px; padding: 10px; }
+.wb-err { background: rgba(220,38,38,.15); border: 1px solid #dc2626; border-radius: 10px; padding: 10px; }
+
+@media print {
+  body { background: #fff; }
+  .wb-navbar, .nav-tabs, .btn { display: none; }
+}
